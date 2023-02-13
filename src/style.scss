@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+body, html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+div.container {
+    width: 75%;
+    margin: 0 auto;
+
+    nav {
+        margin-top: 3em;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            width: fit-content;
+            height: fit-content;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 3em;
+            margin: 0;
+        }
+        ul {
+            width: 100%;
+            display: flex;
+            list-style: none;
+            font-size: 1rem;
+            gap: 3em;
+            justify-content: right;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+}
