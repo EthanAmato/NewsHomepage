@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
-body, html {
+
+body,
+html {
     margin: 0;
     padding: 0;
 }
+
 body {
     width: 100%;
     min-height: 100vh;
@@ -26,6 +29,7 @@ div.container {
             font-size: 3em;
             margin: 0;
         }
+
         ul {
             width: 100%;
             display: flex;
@@ -33,20 +37,119 @@ div.container {
             font-size: 1rem;
             gap: 3em;
             justify-content: right;
+
             a {
                 text-decoration: none;
                 color: black;
+                &:hover {
+                    color: #F15D51;
+                }
             }
         }
     }
 
+    main {
+        padding-top: 1em;
+        display: grid;
+        grid-template-areas:
+            "spotlight spotlight new"
+            "spotlight spotlight new"
+            "recommend recommend recommend";
+        gap: 1.5em;
+
+        section.spotlight {
+            grid-area: spotlight;
+            display: grid;
+
+            img {
+                width: 100%;
+            }
+
+            div.text {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1em;
+                align-items: center;
+
+                h2 {
+                    font-size: 3em;
+                }
+
+                p {
+                    display: grid;
+                    color: rgb(112, 111, 111);
+                    align-items: center;
+                    grid-template-rows: 2/3fr 1/3fr;
+
+                    a {
+                        width: fit-content;
+                        height: fit-content;
+                        margin-top: 1.5em;
+                        letter-spacing: .4em;
+                        text-decoration: none;
+                        padding: 1em;
+                        background-color: #F15D51;
+                        color: white;
+                        transition: background-color .7s ease-in-out;
+
+                        &:hover {
+                            background-color: black;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        section.new-articles {
+            grid-area: new;
+            background-color: black;
+            color: white;
+            padding: 1em;
+
+            h2 {
+                color: #EAAF54;
+                font-size: 2em;
+                margin: .5em 0;
+            }
+
+            hr {
+                margin-bottom: 1em;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 1.2em;
+                transition: color .7s ease-in-out;
+
+                &:hover {
+                    color: #EAAF54;
+                }
+            }
+
+            p {
+                font-size: .9em;
+                letter-spacing: .1em;
+                color: rgb(189, 188, 188);
+            }
+        }
+
+        section.recommend {
+            grid-area: recommend;
+        }
+    }
 
 
-
-
-
-
-
-
-
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        /* Need a specific value to work */
+    }
 }
