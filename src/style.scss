@@ -46,6 +46,10 @@ div.container {
                 }
             }
         }
+        img {
+            width: 50px;
+            display: none;
+        }
     }
 
     main {
@@ -56,6 +60,7 @@ div.container {
             "spotlight spotlight new"
             "recommend recommend recommend";
         gap: 1.5em;
+        width: 100%;
 
         section.spotlight {
             grid-area: spotlight;
@@ -72,6 +77,7 @@ div.container {
                 align-items: center;
 
                 h2 {
+                    font-weight: 800;
                     font-size: 3em;
                 }
 
@@ -138,18 +144,79 @@ div.container {
 
         section.recommend {
             grid-area: recommend;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            div {
+                display: grid;
+                grid-template-columns: 150px 1fr;
+                img {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+                div.text {
+                    display: flex;
+                    flex-direction: column;
+    
+                    h2 {
+                        font-size: 2em;
+                        margin: 0;
+                        color: #C6C5CA;
+                    }
+
+                    a {
+                        color: rgb(0, 0, 0);
+                        text-decoration: none;
+                        font-weight: 700;
+                        font-size: 1.2em;
+                        transition: color .7s ease-in-out;
+        
+                        &:hover {
+                            color: #F15D51;
+                        }
+                    }
+    
+                    p {
+                        display: grid;
+                        color: rgb(112, 111, 111);
+                        align-items: center;
+                        grid-template-rows: 2/3fr 1/3fr;
+
+                    }
+                }
+            }
         }
     }
 
+    @media screen and (max-width: 800px) {
 
-    .attribution {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        width: fit-content;
-        /* Need a specific value to work */
+        &.container {
+            width: fit-content;
+        }
+         nav {
+            display: block;
+            width: 100%;
+            h1 {
+                display: inline-block;
+                margin: 0;
+            }
+            ul {
+                display: none;
+            }
+
+            img {
+                display:block;
+                width: 50px;
+                float: right;
+            }
+         }
+
+         main {
+            grid-template-areas:
+            "spotlight"
+            "new"
+            "recommend";
+         }
     }
+
+    
 }

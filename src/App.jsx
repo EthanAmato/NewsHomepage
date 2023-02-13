@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './style.scss'
 import Spotlight from './assets/images/image-web-3-desktop.jpg'
+import Hamburger from './assets/images/Hamburger_icon.svg.png'
 import Img1 from './assets/images/image-retro-pcs.jpg'
 import Img2 from './assets/images/image-top-laptops.jpg'
 import Img3 from './assets/images/image-gaming-growth.jpg'
@@ -21,6 +22,7 @@ function App() {
             <li><a href='#'>Trending</a></li>
             <li><a href='#'>Categories</a></li>
           </ul>
+          <img src={Hamburger} alt="Hamburger icon"/>
         </nav>
       </header>
       <main>
@@ -49,26 +51,35 @@ function App() {
           <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
         </section>
         <section className='recommend'>
-          <img src={Img1} />
-          01
-          Reviving Retro PCs
-          What happens when old PCs are given modern upgrades?
-          <img src={Img2} />
+          <div>
+            <img src={Img1} />
+            <div className='text'>
+              <h2>01</h2>
+              <a href='#'>Reviving Retro PCs</a>
+              <p>What happens when old PCs are given modern upgrades?</p>
+            </div>
+          </div>
 
-          02
-          Top 10 Laptops of 2022
-          Our best picks for various needs and budgets.
-          <img src={Img3} />
-
-          03
-          The Growth of Gaming
-          How the pandemic has sparked fresh opportunities.
+          <div>
+            <img src={Img2} />
+            <div className='text'>
+              <h2>02</h2>
+              <a href='#'>Top 10 Laptops of 2022</a>
+              <p>Our best picks for various needs and budgets.</p>
+            </div>
+          </div>
+          
+          <div>
+            <img src={Img3} />
+            <div className='text'>
+              <h2>03</h2>
+              <a href='#'>The Growth of Gaming</a>
+              <p>How the pandemic has sparked fresh opportunities.</p>
+            </div>
+          </div>
         </section>
 
-        <div className="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-          Coded by <a href="#">Your Name Here</a>.
-        </div>
+        
       </main>
     </div>
   )
