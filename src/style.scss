@@ -228,6 +228,12 @@ div.container {
 
                 div.text {
                     grid-template-columns: 1fr;
+                    h2 {
+                        margin-bottom: 0;
+                    }
+                    p {
+                        margin-top: 0;
+                    }
                 }
             }
             section.recommend {
@@ -253,8 +259,9 @@ div.container {
         display: block;
         float: right;
         padding-right: 10%;
+        padding-bottom: 1em;
         right: 0;
-        width: 3em;
+        width: 2em;
     }
     ul {
         width: 100%;
