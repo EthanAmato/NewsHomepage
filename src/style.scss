@@ -6,6 +6,10 @@ html {
     padding: 0;
 }
 
+#root {
+    width: 100vw;
+}
+
 body {
     width: 100%;
     min-height: 100vh;
@@ -190,11 +194,13 @@ div.container {
     @media screen and (max-width: 800px) {
 
         &.container {
-            width: fit-content;
+            width: 100%;
+
         }
          nav {
             display: block;
-            width: 100%;
+            width: 80%;
+            margin: 1em auto 0 auto;
             h1 {
                 display: inline-block;
                 margin: 0;
@@ -207,6 +213,7 @@ div.container {
                 display:block;
                 width: 50px;
                 float: right;
+                cursor: pointer;
             }
          }
 
@@ -215,8 +222,63 @@ div.container {
             "spotlight"
             "new"
             "recommend";
+            width: 80%;
+            margin: 0 auto;
+            section.spotlight{
+
+                div.text {
+                    grid-template-columns: 1fr;
+                }
+            }
+            section.recommend {
+                grid-template-columns: 1fr;
+                gap: 1em;
+            }
          }
     }
 
     
+}
+
+.sidebar {
+    position: fixed;
+    width: 400px;
+    height: 100%;
+    right: 0em;
+    background-color: white;
+    display: none;
+    img {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        float: right;
+        padding-right: 10%;
+        right: 0;
+        width: 3em;
+    }
+    ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        font-size: 1rem;
+        gap: 3em;
+        a {
+            text-decoration: none;
+            color: black;
+            &:hover {
+                color: #F15D51;
+            }
+        }
+    }
+}
+.clicked {
+    display: block;
+}
+
+@media screen and (max-width: 800px) {
+    #root {
+        width: 100vw;
+    }
+
 }
