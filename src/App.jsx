@@ -67,7 +67,7 @@ function App() {
           </section>
           <section className='recommend'>
             <div>
-              <img src={Img1} />
+              <img src={Img1} alt="Reviving Retro PCs" />
               <div className='text'>
                 <h2>01</h2>
                 <a href='#'>Reviving Retro PCs</a>
@@ -76,7 +76,7 @@ function App() {
             </div>
 
             <div>
-              <img src={Img2} />
+              <img src={Img2} alt="Top 10 Laptops of 2022"/>
               <div className='text'>
                 <h2>02</h2>
                 <a href='#'>Top 10 Laptops of 2022</a>
@@ -85,7 +85,7 @@ function App() {
             </div>
 
             <div>
-              <img src={Img3} />
+              <img src={Img3} alt="The Growth of Gaming"/>
               <div className='text'>
                 <h2>03</h2>
                 <a href='#'>The Growth of Gaming</a>
